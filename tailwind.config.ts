@@ -78,7 +78,11 @@ export default {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
-  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
+  			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
+  			gradient: 'gradient 8s linear infinite',
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
   		keyframes: {
   			rainbow: {
@@ -112,9 +116,37 @@ export default {
   				'100%': {
   					transform: 'translateZ(0) rotate(360deg)'
   				}
+  			},
+  			gradient: {
+  				to: {
+  					backgroundPosition: 'var(--bg-size) 0'
+  				}
+  			},
+  			orbit: {
+  				'0%': {
+  					transform: 'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))'
+  				},
+  				'100%': {
+  					transform: 'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
   			}
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { Sora } from "next/font/google";
-import "./globals.css";
 import { Navbar } from "@/components/nav-bar";
+import type { Metadata } from "next";
+import { Unbounded } from "next/font/google";
+import "./globals.css";
+import Footer from "@/components/custom/footer";
 
-const sora = Sora({
+const unbounded = Unbounded({
   subsets: ["latin"],
-  weight: ['100', '400', '500', '600', '700', '800'],
+  weight: ["200", "300", '400', '500', '600', '700', '800', "900"],
   variable: "--font-sora",
-
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,10 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sora.className} antialiased`}
+        className={`${unbounded.className} antialiased bg-[#f5f5f5]`}
       >
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

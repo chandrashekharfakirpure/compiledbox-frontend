@@ -1,38 +1,57 @@
+import { AnimatedGradientText } from "@/components/animated-gradient-text";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { buttonVariants } from "@/components/ui/button";
-import { GridPattern } from "@/components/ui/grid-pattern";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem
+} from "@/components/ui/carousel";
+import { Icons } from "@/components/ui/icons";
 import { NumberTicker } from "@/components/ui/number-ticker";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { cn } from "@/lib/utils";
-import { FolderIcon, SendHorizonalIcon } from "lucide-react";
+import { CheckCircle2Icon, ChevronRightIcon, FrameIcon, Layers2Icon, PencilRulerIcon, SendHorizonalIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { FRONTFAQ } from "@/components/custom/faqs";
 
 export default function Home() {
   return (
     <>
-      <section className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-bgdark md:shadow-xl py-24 sm:py-32">
-        <MaxWidthWrapper className="max-w-screen-xl">
-          <div className="bg-black/80 py-24 text-center rounded-[6rem] backdrop-blur-2xl shadow-[-10px_-10px_250px_50px_rgba(0,0,0,0.1),_0px_0px_100px_5px_rgba(23,_13,_5,_1)]">
+      <section className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden py-20 sm:py-24">
+        <MaxWidthWrapper className="max-w-screen-3xl">
+          <div className="bg-white/80 py-24 text-center rounded-[4rem] backdrop-blur-2xl">
             <div className="space-y-12">
               <div className="space-y-2">
-                <h1 className="text-[4rem] font-semibold tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  Top-Notch <span className="lg:block">Web Design Service</span>
+                <div className="z-10 flex items-center justify-center">
+                  <AnimatedGradientText>
+                    <span className="text-xl">🎉 </span><hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+                    <span
+                      className={cn(
+                        `text-md py-2 inline animate-gradient bg-gradient-to-r from-blue-600 via-[#9c40ff] to-blue-600 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                      )}
+                    >
+                      Available for new projects
+                    </span>
+                    <ChevronRightIcon className="ml-1 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                  </AnimatedGradientText>
+                </div>
+                <h1 className="text-[4.5rem] font-medium tracking-tighter bg-gradient-to-r from-gray-800 to-gray-950 bg-clip-text text-transparent">
+                  Top-Notch Web Design Service to<span className="lg:block"> Stand out from the Crowd</span>
                 </h1>
 
-                <p className="text-gray-400 text-[1.2rem]">We bring your vision to life and drive your success online.</p>
+                <p className="text-gray-700 text-[1.2rem]">Our creative ideas combined with the power of NextJS gives your website special feel.<span className="lg:block">Your vision, our innovation.</span></p>
               </div>
               <div className="flex justify-center ">
-                <div className="border border-gray-800 rounded-[1.5rem] py-4 px-10">
-                  <Link href='/contact' className={buttonVariants({
-                    size: 'xl',
-                    className: "ring-1 ring-brand-800 rounded-xl py-4 px-10 text-brand-700 font-medium text-lg bg-gradient-to-r from-black to-gray-800 hover:text-brand-900 hover:border-brand-900"
-                  })}>Contact Us</Link>
-                  <Link href='/contact' className={buttonVariants({
-                    size: 'xl',
-                    variant: 'ghost',
-                    className: "rounded-xl text-brand-100/50 font-medium text-lg hover:bg-transparent hover:text-white"
-                  })}>Get Started</Link>
+                <div className="border border-blue-200 rounded-full py-4 px-5">
+                  <Link href='#getstarted' className='flex w-full items-center justify-center rounded-full py-4 px-10 bg-blue-600 hover:bg-blue-600/90 text-white group'>Get Started Today <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" /></Link>
                 </div>
               </div>
             </div>
@@ -40,157 +59,223 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
-      <div className="h-px border border-gray-800" />
-      <section className="relative bg-bgdark py-24 sm:py-32">
-
-        <MaxWidthWrapper>
-          <div className="grid lg:max-w-none lg:grid-cols-3 gap-10">
-            <div className="space-y-10">
-              <div>
-                <h2 className="text-[3.2rem] font-semibold tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">What We Offer</h2>
-                <p className="text-zinc-300">Innovative website design, robust applications, AI integrations, and white-labeled solutions to propel your brand forward.</p>
-              </div>
-              <div>
-                <Link href='/web-design'>
-                  <ShimmerButton className="shadow-2xl">
-                    <span className="whitespace-pre-wrap text-center text-sm leading-none tracking-tight text-white lg:text-md flex items-center gap-2">
-                      Learn More <SendHorizonalIcon size={17} fill="#000" />
-                    </span>
-                  </ShimmerButton>
-                </Link>
+      <section className="relative pb-24 sm:pb-32">
+        <MaxWidthWrapper className="max-w-screen-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="col-span-2 pb-24 bg-bgdark rounded-[2rem] flex flex-col space-y-10">
+              <div className="space-y-5 p-8">
+                <h2 className="text-[2.9rem] text-gray-100 font-medium">Responsive for every <div className="block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></h2>
+                <p className="text-gray-300">We make sure that your website is available for every device user!</p>
               </div>
             </div>
-            <div className="grid lg:max-w-none lg:grid-cols-2 gap-10 col-span-2">
-
-              <div>
-                <div className="bg-transparent bg-opacity-0">
-                  <span className="relative flex bg-blue-700 w-fit px-2 text-sm text-white">creativity</span>
-                </div>
-                <div className="group p-px bg-gray-700">
-                  <div className="bg-bgdark space-y-8 p-5">
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-white text-[1.3rem]">Website Design</h2>
-                      <FolderIcon color="#FFAE72" className="group-hover:stroke-blue-700 transition-all duration-500" />
-                    </div>
-                    <div>
-                      <p className="text-zinc-300 font-normal">We create visually stunning and user-friendly websites tailored to your brand.</p>
-                    </div>
-                  </div>
-                </div>
+            <div className="row-span-2 py-10 bg-white rounded-[2rem] flex flex-col items-center space-y-10 justify-center">
+              <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden ">
+                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+                  Stack
+                </span>
+                <OrbitingCircles iconSize={40}>
+                  <Icons.nextjs />
+                  <Icons.typescript />
+                  <Icons.django />
+                  <Icons.python />
+                  <Icons.nodejs />
+                </OrbitingCircles>
+                <OrbitingCircles iconSize={40} radius={100} reverse speed={2}>
+                  <Icons.tailwindcss />
+                  <Icons.reactnative />
+                  <Icons.gitHub />
+                </OrbitingCircles>
               </div>
-              <div>
-                <div className="bg-transparent bg-opacity-0">
-                  <span className="relative flex bg-blue-700 w-fit px-2 text-sm text-white">custom</span>
-                </div>
-                <div className="group p-px bg-gray-700">
-                  <div className="bg-bgdark space-y-8 p-5">
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-white text-[1.3rem]">Application Development</h2>
-                      <FolderIcon color="#FFAE72" className="group-hover:stroke-blue-700 transition-all duration-500" />
-                    </div>
-                    <div>
-                      <p className="text-zinc-300 font-normal">Our team develops powerful, secure, and scalable web and mobile applications.</p>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div className="row-span-1 py-10 bg-blue-100 rounded-[2rem] flex flex-col space-y-10">
+              <div className="p-8 space-y-5">
+                <h2 className="text-3xl text-gray-800 font-medium">Why Us</h2>
+                <p className="text-gray-800 font-normal text-[1.1rem]">With years of experience in web design and application development, our team stays ahead of the latest trends and technologies.</p>
               </div>
-              <div>
-                <div className="bg-transparent bg-opacity-0">
-                  <span className="relative flex bg-blue-700 w-fit px-2 text-sm text-white">innovation</span>
-                </div>
-                <div className="group p-px bg-gray-700">
-                  <div className="bg-bgdark space-y-8 p-5">
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-white text-[1.3rem]">ML Model Integration</h2>
-                      <FolderIcon color="#FFAE72" className="group-hover:stroke-blue-700 transition-all duration-500" />
-                    </div>
-                    <div>
-                      <p className="text-zinc-300 font-normal">Harness the power of machine learning with our integration services.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="bg-transparent bg-opacity-0">
-                  <span className="relative flex bg-blue-700 w-fit px-2 text-sm text-white">partnership</span>
-                </div>
-                <div className="group p-px bg-gray-700">
-                  <div className="bg-bgdark space-y-8 p-5">
-                    <div className="flex justify-between items-center">
-                      <h2 className="text-white text-[1.3rem]">White-Labeled Development</h2>
-                      <FolderIcon color="#FFAE72" className="group-hover:stroke-blue-700 transition-all duration-500" />
-                    </div>
-                    <div>
-                      <p className="text-zinc-300 font-normal">Empower your business with our white-labeled development services.</p>
-                    </div>
-                  </div>
+            </div>
+            <div className="row-span-1 bg-green-200 rounded-[2rem] flex flex-col space-y-10">
+              <div className="p-8 space-y-5">
+                <div className=" space-y-5">
+                  <h3 className="text-gray-900 text-[4rem] font-medium ">
+                    <NumberTicker
+                      value={30}
+                      className="whitespace-pre-wrap font-medium tracking-tighter text-gray-900"
+                    />+
+                  </h3>
+                  <p className="text-[1.1rem] text-gray-700">Successfully launched projects</p>
+                  <Button variant={'custom2'} size={'custom'} className="group">Contact Us<SendHorizonalIcon className="transition-transform group-hover:translate-x-2 duration-500" /></Button>
                 </div>
               </div>
             </div>
           </div>
         </MaxWidthWrapper>
       </section>
-      <section className="relative bg-bgdark ">
-        <div className="relative py-24 sm:py-32 flex w-full flex-col items-center justify-center overflow-hidden md:shadow-xl">
-          <MaxWidthWrapper>
-            <div className="grid grid-cols-4 gap-10">
-              <div className="col-span-3 rounded-xl border border-gray-700 bg-gradient-to-b from-black to-gray-800 p-10">
-                <div className="max-w-xl space-y-10">
-                  <h3 className="text-gray-100 text-[2.7rem] font-medium ">Responsive for every <span className="text-brand-800">device</span> and <span className="text-brand-800">browser</span>!</h3>
-                  <p className="text-[1.2rem] text-gray-400">We make sure that your website is available for every device user!</p>
+      <section className="relative py-20 lg:py-24 ">
+        <MaxWidthWrapper className=" max-w-screen-3xl ">
+          <div className=" lg:max-w-none bg-bgdark p-10 rounded-[4rem]">
+            <div className="pb-10 ">
+              <h2 className="text-[3.2rem] font-semibold tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Featured Work</h2>
+            </div>
+            <Carousel
+              opts={{
+                align: "start",
+              }}
+              className="w-full max-w-full"
+            >
+              <CarouselContent>
+                <CarouselItem className="basis-1/3">
+                  <div>
+                    <Image src='/images/5.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <h4 className="text-xl text-white px-1 pt-5">Proton Servers</h4>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="basis-1/3">
+                  <div>
+                    <Image src='/images/2.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <h4 className="text-xl text-white px-1 pt-5">PaasTech</h4>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="basis-1/3">
+                  <div>
+                    <Image src='/images/4.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <h4 className="text-xl text-white px-1 pt-5">HostnExtra Technologies</h4>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="basis-1/3">
+                  <div>
+                    <Image src='/images/1.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <h4 className="text-xl text-white px-1 pt-5">HashTag</h4>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="basis-1/3">
+                  <div>
+                    <Image src='/images/3.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <h4 className="text-xl text-white px-1 pt-5">MK Construction Solution</h4>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="basis-1/3">
+                  <div>
+                    <Image src='/images/6.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <h4 className="text-xl text-white px-1 pt-5">Barbrika Technology</h4>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+            </Carousel>
+          </div>
+        </MaxWidthWrapper>
+      </section>
+      <section className="relative">
+        <div className="relative py-20 lg:py-24 flex w-full flex-col items-center justify-center overflow-hidden">
+          <MaxWidthWrapper className="max-w-screen-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div className="bg-white shadow-sm p-10 rounded-3xl">
+                <div className="space-y-5">
+                  <PencilRulerIcon size={35} />
+                  <h2 className="text-[1.7rem]">Pixel Flair</h2>
+                  <p className="text-sm">We craft eye-catching designs that captivate visitors at first glance.</p>
+                </div>
+                <div className="py-5">
+                  <h3 className="text-[2.5rem]">₹50000</h3>
+                </div>
+                <div className="pb-10">
+                  <Link href='/pricing' className='flex w-full items-center justify-center rounded-full py-3 bg-bgdark hover:bg-bgdark/90 text-white group'>
+                    Explore Plan <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" />
+                  </Link>
+                </div>
+
+                <div>
+                  <ul className="space-y-3">
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Next.js Framework</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> TypeScript Language</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> 1 Year KVM VPS Included</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Custom Code</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Updates via Slack</li>
+                  </ul>
                 </div>
               </div>
-              <div className="rounded-xl border border-gray-700 bg-gradient-to-b from-black to-gray-800 p-10">
-                <div className="max-w-xl space-y-10">
-                  <h3 className="text-gray-100 text-[4rem] font-medium ">
-                    <NumberTicker
-                      value={20}
-                      className="whitespace-pre-wrap font-medium tracking-tighter text-gray-100"
-                    />+
-                  </h3>
-                  <p className="text-[1.2rem] text-gray-400">Successfully launched projects</p>
+              <div className="bg-white shadow-sm p-10 rounded-3xl">
+                <div className="space-y-5">
+                  <Layers2Icon size={35} />
+                  <h2 className="text-[1.7rem]">Full Stack Pulse</h2>
+                  <p className="text-sm">Get the best of both worlds with a sleek user interface and robust server-side engine.</p>
+                </div>
+                <div className="py-5">
+                  <h3 className="text-[2.5rem]">₹100000</h3>
+                </div>
+                <div className="pb-10">
+                  <Link href='/pricing' className='flex w-full items-center justify-center rounded-full py-3 bg-bgdark hover:bg-bgdark/90 text-white group'>
+                    Explore Plan <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" />
+                  </Link>
+                </div>
+
+                <div>
+                  <ul className="space-y-3">
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Everything from Pixel Flair</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Enterprise-grade frameworks</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Robust back-end solutions </li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Custom Code</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Updates via Slack</li>
+                  </ul>
                 </div>
               </div>
-              <div className="rounded-xl border border-gray-700 bg-gradient-to-t from-black to-gray-800 p-10">
-                <div className="max-w-xl space-y-5">
-                  <h3 className="text-gray-100 text-[2.5rem] font-medium"><span className="text-brand-800">Core</span> stack</h3>
-                    <ul className="space-y-1 text-[1.2rem] text-gray-400">
-                      <li>NextJS</li>
-                      <li>Typescript</li>
-                      <li>Python</li>
-                      <li>Django</li>
-                      <li>WordPress</li>
-                    </ul>
+              <div className="bg-white shadow-sm p-10 rounded-3xl">
+                <div className="space-y-5">
+                  <FrameIcon size={35} />
+                  <h2 className="text-[1.7rem]">Bespoke Catalyst</h2>
+                  <p className="text-sm">We build everything from scratch as your unique requirements to maximum impact.</p>
                 </div>
-              </div>
-              <div className="relative col-span-3 rounded-xl border border-gray-700 bg-gradient-to-t from-black to-gray-800 p-10">
-                <div className="max-w-3xl space-y-10">
-                  <h3 className="text-gray-100 text-[2.5rem] font-medium ">Why Choose Us?</h3>
-                  <p className="text-[1.2rem] text-gray-400">With years of experience in web design and application development, our team stays ahead of the latest trends and technologies. We leverage cutting-edge tools and techniques to create websites that are not only beautiful but also optimized for performance and scalability.</p>
+                <div className="py-5">
+                  <h3 className="text-[2.5rem]">Contact Us</h3>
+                </div>
+                <div className="pb-10">
+                  <Link href='/pricing' className='flex w-full items-center justify-center rounded-full py-3 bg-blue-600 hover:bg-blue-600/90 text-white group'>
+                    Contact Us <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" />
+                  </Link>
+                </div>
+
+                <div>
+                  <ul className="space-y-3">
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#0a0a0a" color="#fff" size={30} /> Everything from Pixel Flair</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#0a0a0a" color="#fff" size={30} /> Enterprise-grade frameworks</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#0a0a0a" color="#fff" size={30} /> Robust back-end solutions </li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#0a0a0a" color="#fff" size={30} /> Custom Code</li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#0a0a0a" color="#fff" size={30} /> Updates via Slack</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </MaxWidthWrapper>
-          <GridPattern
-            squares={[
-              [4, 4],
-              [5, 1],
-              [8, 2],
-              [5, 3],
-              [5, 5],
-              [10, 10],
-              [12, 15],
-              [15, 10],
-              [20, 25],
-              [30, 35],
-              [40, 45],
-              [50, 55],
-            ]}
-            className={cn(
-              "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-              "inset-x-0 inset-y-[-60%] h-[200%] skew-y-12",
-            )}
-          />
+        </div>
+      </section>
+      <section className="relative ">
+        <div className="relative py-20 lg:py-24 flex w-full flex-col items-center justify-center overflow-hidden">
+          <MaxWidthWrapper className="max-w-screen-3xl">
+            <div className="p-10 bg-white rounded-[2.5rem]">
+              <div className="pb-2">
+                <h2 className="text-[3.2rem] font-semibold tracking-tighter text-bgdark">Frequently asked <span className="lg:block">Questions</span></h2>
+              </div>
+              <div className="w-full pb-5">
+                <Accordion type="single" collapsible >
+                  {FRONTFAQ.map((item, index) => (
+                    <AccordionItem key={index} value={`${index}`}>
+                      <AccordionTrigger className="font-normal text-[1.2rem] text-gray-700">{item.question}</AccordionTrigger>
+                      <AccordionContent>
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+              <div className="py-10 space-y-5">
+                <div className="flex justify-center">
+                  <h4 className="text-center max-w-lg text-gray-800">Got questions? Here are answers to the ones we get asked most often.</h4>
+                </div>
+                <div className="flex justify-center items-center">
+                  <Link href='#getstarted' className='flex  items-center justify-center rounded-full py-4 px-10 bg-blue-600 hover:bg-blue-600/90 text-white group'>Ask a Question <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" /></Link>
+                </div>
+              </div>
+            </div>
+          </MaxWidthWrapper>
         </div>
       </section>
     </>
