@@ -10,7 +10,7 @@ export const Navbar = async () => {
                     <Link href='/' className="flex z-40 font-semibold text-gray-900 border-2 border-blue-600 py-1 px-4">
                         compiledbox
                     </Link>
-                    <div className="h-full flex items-center space-x-4">
+                    <div className="hidden h-full lg:flex items-center space-x-4">
 
                         <Link href='/pricing' className= 'flex items-center gap-1 text-gray-800 hover:bg-gray-800/70 py-1 px-4 rounded-md'>
                             Home

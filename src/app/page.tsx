@@ -43,11 +43,11 @@ export default function Home() {
                     <ChevronRightIcon className="ml-1 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                   </AnimatedGradientText>
                 </div>
-                <h1 className="text-[4.5rem] font-medium tracking-tighter bg-gradient-to-r from-gray-800 to-gray-950 bg-clip-text text-transparent">
+                <h1 className="text-[2.5rem] lg:text-[4.5rem] leading-snug lg:leading-none font-medium tracking-tighter bg-gradient-to-r from-gray-800 to-gray-950 bg-clip-text text-transparent">
                   Top-Notch Web Design Service to<span className="lg:block"> Stand out from the Crowd</span>
                 </h1>
 
-                <p className="text-gray-700 text-[1.2rem]">Our creative ideas combined with the power of NextJS gives your website special feel.<span className="lg:block">Your vision, our innovation.</span></p>
+                <p className="text-gray-700 text-[1rem] lg:text-[1.2rem]">Our creative ideas combined with the power of NextJS gives your website special feel.<span className="lg:block">Your vision, our innovation.</span></p>
               </div>
               <div className="flex justify-center ">
                 <div className="border border-blue-200 rounded-full py-4 px-5">
@@ -61,10 +61,10 @@ export default function Home() {
       </section>
       <section className="relative pb-24 sm:pb-32">
         <MaxWidthWrapper className="max-w-screen-3xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-8">
             <div className="col-span-2 pb-24 bg-bgdark rounded-[2rem] flex flex-col space-y-10">
               <div className="space-y-5 p-8">
-                <h2 className="text-[2.9rem] text-gray-100 font-medium">Responsive for every <div className="block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></h2>
+                <h2 className="text-[2.2rem] lg:text-[2.9rem] text-gray-100 font-medium">Responsive for every <div className="lg:block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></h2>
                 <p className="text-gray-300">We make sure that your website is available for every device user!</p>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
       <section className="relative py-20 lg:py-24 ">
         <MaxWidthWrapper className=" max-w-screen-3xl ">
-          <div className=" lg:max-w-none bg-bgdark p-10 rounded-[4rem]">
+          <div className=" lg:max-w-none bg-bgdark p-10 rounded-[2rem] lg:rounded-[4rem]">
             <div className="pb-10 ">
               <h2 className="text-[3.2rem] font-semibold tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Featured Work</h2>
             </div>
@@ -123,37 +123,37 @@ export default function Home() {
               className="w-full max-w-full"
             >
               <CarouselContent>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="lg:basis-1/3">
                   <div>
                     <Image src='/images/5.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">Proton Servers</h4>
                   </div>
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="lg:basis-1/3">
                   <div>
                     <Image src='/images/2.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">PaasTech</h4>
                   </div>
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="lg:basis-1/3">
                   <div>
                     <Image src='/images/4.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">HostnExtra Technologies</h4>
                   </div>
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="lg:basis-1/3">
                   <div>
                     <Image src='/images/1.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">HashTag</h4>
                   </div>
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="lg:basis-1/3">
                   <div>
                     <Image src='/images/3.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">MK Construction Solution</h4>
                   </div>
                 </CarouselItem>
-                <CarouselItem className="basis-1/3">
+                <CarouselItem className="lg:basis-1/3">
                   <div>
                     <Image src='/images/6.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">Barbrika Technology</h4>
@@ -250,7 +250,7 @@ export default function Home() {
       <section className="relative ">
         <div className="relative py-20 lg:py-24 flex w-full flex-col items-center justify-center overflow-hidden">
           <MaxWidthWrapper className="max-w-screen-3xl">
-            <div className="p-10 bg-white rounded-[2.5rem]">
+            <div className="p-5 lg:p-10 bg-white rounded-[2.5rem]">
               <div className="pb-2">
                 <h2 className="text-[3.2rem] font-semibold tracking-tighter text-bgdark">Frequently asked <span className="lg:block">Questions</span></h2>
               </div>
@@ -258,9 +258,9 @@ export default function Home() {
                 <Accordion type="single" collapsible >
                   {FRONTFAQ.map((item, index) => (
                     <AccordionItem key={index} value={`${index}`}>
-                      <AccordionTrigger className="font-normal text-[1.2rem] text-gray-700">{item.question}</AccordionTrigger>
+                      <AccordionTrigger className="font-normal text-[0.9] lg:text-[1.2rem] text-gray-700">{item.question}</AccordionTrigger>
                       <AccordionContent>
-                        {item.answer}
+                        <p className="text-gray-700 leading-relaxed">{item.answer}</p>
                       </AccordionContent>
                     </AccordionItem>
                   ))}
