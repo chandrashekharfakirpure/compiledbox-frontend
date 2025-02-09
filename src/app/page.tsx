@@ -61,7 +61,7 @@ export default function Home() {
       </section>
       <section className="relative pb-24 sm:pb-32">
         <MaxWidthWrapper className="max-w-screen-3xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-8">
             <div className="col-span-2 pb-24 bg-bgdark rounded-[2rem] flex flex-col space-y-10">
               <div className="space-y-5 p-8">
                 <h2 className="text-[2.2rem] lg:text-[2.9rem] text-gray-100 font-medium">Responsive for every <div className="lg:block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></h2>
