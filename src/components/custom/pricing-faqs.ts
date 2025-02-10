@@ -1,22 +1,22 @@
 export const PRICINGFAQS = [
     {
-        question: "How long does it take to design and develop a website?",
-        answer: "The timeline depends on the project’s complexity. A standard website typically takes about 6–8 weeks from initial consultation to launch, while custom or more feature-rich projects may require additional time. We’ll provide a tailored schedule after assessing your specific needs."
+        question: "Are there any hidden fees?",
+        answer: "No, we believe in transparent pricing. All costs will be outlined in your project proposal, and we will not charge any hidden fees."
     },
     {
-        question: "What is your website design process?",
-        answer: "Our process starts with understanding your business goals and audience, followed by a strategy phase, design mockups, development, and thorough testing. We maintain open communication throughout to ensure the final product perfectly aligns with your vision."
+        question: "What if I need ongoing support and maintenance?",
+        answer: "We offer ongoing support and maintenance packages at an additional cost. These packages can be customized to fit your needs and ensure your website remains up-to-date and secure."
     },
     {
         question: "Will my website be mobile-friendly and optimized for all devices?",
         answer: "Absolutely. Every website we build is designed to be fully responsive, ensuring it looks great and functions seamlessly across desktops, tablets, and smartphones. This approach not only enhances user experience but also improves your site’s accessibility."
     },
     {
-        question: "Do you offer ongoing website maintenance and support?",
-        answer: "Yes, we offer flexible maintenance and support packages with additional cost to keep your website secure, updated, and performing optimally. Whether it’s regular updates, troubleshooting, or adding new features, our team is here to provide continuous support even after launch."
+        question: "How do you handle hosting and domain costs?",
+        answer: "We provide 1 year of KVM VPS for hosting website and domain costs are typically not included in our project pricing. We can recommend hosting providers or manage these services for you at an additional cost."
     },
     {
-        question: "Can you help redesign or revamp my existing website?",
-        answer: "Certainly! We specialize in modernizing existing websites to enhance their visual appeal, functionality, and user engagement. Our redesign services focus on updating the look and feel, improving performance, and ensuring your site remains competitive."
+        question: "Are there any ongoing costs I should be aware of?",
+        answer: "Beyond the initial project cost, ongoing costs may include domain renewal, maintenance, and updates. We can provide a detailed breakdown based on your needs."
     }
 ]
