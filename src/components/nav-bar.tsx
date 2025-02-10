@@ -13,13 +13,13 @@ export const Navbar = async () => {
                         <Link href='/pricing' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
                             Pricing
                         </Link>
-                        <Link href='/sign-in' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
+                        <Link href='/agency' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
                             Agency
                         </Link>
-                        <Link href='/sign-in' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
+                        <Link href='/blog' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
                             Blog
                         </Link>
-                        <Link href='/contact-us' className="py-2 text-sm px-8 bg-bgdark hover:bg-bgdark/90 text-gray-100 rounded-full">
+                        <Link href='/contact' className="py-2 text-sm px-8 bg-bgdark hover:bg-bgdark/90 text-gray-100 rounded-full">
                             Contact
                         </Link>
                     </div>
