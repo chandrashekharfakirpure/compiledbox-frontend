@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { MaxWidthWrapper } from "./max-width-wrapper"
-import { buttonVariants } from "./ui/button"
 
 export const Navbar = async () => {
     return (
@@ -11,27 +10,16 @@ export const Navbar = async () => {
                         compiledbox
                     </Link>
                     <div className="hidden h-full lg:flex items-center space-x-4">
-
-                        <Link href='/pricing' className= 'flex items-center gap-1 text-gray-800 hover:bg-gray-800/70 py-1 px-4 rounded-md'>
-                            Home
+                        <Link href='/pricing' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
+                            Pricing
                         </Link>
-                        <Link href='/sign-in' className= 'flex items-center gap-1 text-gray-800 hover:bg-gray-800/70 py-1 px-4 rounded-md'>
-                            Web Design
+                        <Link href='/sign-in' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
+                            Agency
                         </Link>
-                        <Link href='/sign-in' className= 'flex items-center gap-1 text-gray-800 hover:bg-gray-800/70 py-1 px-4 rounded-md'>
-                            Projects
-                        </Link>
-                        <Link href='/sign-in' className= 'flex items-center gap-1 text-gray-800 hover:bg-gray-800/70 py-1 px-4 rounded-md'>
-                            About
-                        </Link>
-                        <Link href='/sign-in' className= 'flex items-center gap-1 text-gray-800 hover:bg-gray-800/70 py-1 px-4 rounded-md'>
+                        <Link href='/sign-in' className= 'flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
                             Blog
                         </Link>
-                        <Link href='/contact-us' className={buttonVariants({
-                            variant:'default',
-                            size:'lg',
-                            className:'rounded-[3rem]'
-                        })}>
+                        <Link href='/contact-us' className="py-2 text-sm px-8 bg-bgdark hover:bg-bgdark/90 text-gray-100 rounded-full">
                             Contact
                         </Link>
                     </div>
