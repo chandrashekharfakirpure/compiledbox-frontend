@@ -27,5 +27,17 @@ export default async function sitemap() {
             changeFrequency: 'monthly',
             priority: 0.80,
         },
+        {
+            url: `${baseUrl}/privacy-policy`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.80,
+        },
+        {
+            url: `${baseUrl}/terms-of-service`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.80,
+        }
     ]
 }
