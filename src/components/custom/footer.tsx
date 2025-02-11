@@ -6,7 +6,7 @@ import Image from 'next/image'
 const Footer = () => {
     return (
         <>
-            <section className="relative   bg-bgdark mx-5 rounded-[2rem] mb-5">
+            <section className="relative bg-bgdark mx-5 rounded-[2rem] mb-5">
                 <MaxWidthWrapper className="max-w-screen-3xl py-20 lg:py-24">
                     <div className='p-3 lg:p-5 rounded-3xl space-y-10'>
                         <div>
@@ -35,7 +35,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <Link href='/' className="flex z-40">
-                                <Image src='/images/logo-white.png' width={300} height={53} alt="CompiledBox Logo" />
+                                <Image src='/images/logo2-white.png' width={300} height={53} alt="CompiledBox Logo" />
                                 <span className="sr-only">CompiledBox</span>
                             </Link>
                         </div>

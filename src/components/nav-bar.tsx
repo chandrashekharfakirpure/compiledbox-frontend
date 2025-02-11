@@ -15,7 +15,7 @@ export const Navbar = async () => {
             <MaxWidthWrapper className="max-w-screen-3xl flex md:flex-col justify-between">
                 <div className="flex h-16 items-center justify-between">
                     <Link href='/' className="flex z-40">
-                        <Image src='/images/logo.png' width={300} height={53} alt="CompiledBox Logo" />
+                        <Image src='/images/logo-dark.png' width={300} height={53} alt="CompiledBox Logo" />
                         <span className="sr-only">CompiledBox</span>
                     </Link>
                     <div className="hidden h-full lg:flex items-center space-x-4">
@@ -41,7 +41,7 @@ export const Navbar = async () => {
                         <SheetContent side={'left'}>
                             <SheetTitle>
                                 <Link href='/' className="flex z-40">
-                                    <Image src='/images/logo.png' width={300} height={53} alt="CompiledBox Logo" />
+                                    <Image src='/images/logo-dark.png' width={300} height={53} alt="CompiledBox Logo" />
                                     <span className="sr-only">CompiledBox</span>
                                 </Link>
                             </SheetTitle>
