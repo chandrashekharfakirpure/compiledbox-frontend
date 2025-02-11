@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { MaxWidthWrapper } from '../max-width-wrapper'
 import { ChevronRightIcon } from 'lucide-react'
+import Image from 'next/image'
 
 const Footer = () => {
     return (
@@ -24,21 +25,24 @@ const Footer = () => {
                     ))}
                 </div>
                 <MaxWidthWrapper className="max-w-screen-3xl py-10">
-                    <div className='flex flex-col lg:flex-row gap-5 items-center lg:items-start justify-between'>
+                    <div className='flex flex-col lg:flex-row gap-5 items-center justify-between'>
                         <div>
                             <ul className='flex flex-row text-gray-200 gap-5 lg:gap-10'>
-                                <li>About</li>
-                                <li>Blog</li>
-                                <li>Contact</li>
+                                <li><Link href='/agency'>Agency</Link></li>
+                                <li><Link href='/blog'>Blog</Link></li>
+                                <li><Link href='/contact'>Contact</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h1 className='text-gray-200'>CompiledBox</h1>
+                            <Link href='/' className="flex z-40">
+                                <Image src='/images/logo-white.png' width={300} height={53} alt="CompiledBox Logo" />
+                                <span className="sr-only">CompiledBox</span>
+                            </Link>
                         </div>
                         <div>
                             <ul className='flex flex-row text-gray-200 gap-5 lg:gap-10'>
-                                <li>Terms of Service</li>
-                                <li>Privacy Policy</li>
+                                <li><Link href='/terms-of-service'>Terms of Service</Link></li>
+                                <li><Link href='/privacy-policy'>Privacy Policy</Link></li>
                             </ul>
                         </div>
                     </div>
