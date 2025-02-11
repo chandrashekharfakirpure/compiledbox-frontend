@@ -41,6 +41,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <ul className='flex flex-row text-gray-200 gap-5 lg:gap-10'>
+                                <li><Link href='/cookie-policy'>Cookies</Link></li>
                                 <li><Link href='/terms-of-service'>Terms of Service</Link></li>
                                 <li><Link href='/privacy-policy'>Privacy Policy</Link></li>
                             </ul>
