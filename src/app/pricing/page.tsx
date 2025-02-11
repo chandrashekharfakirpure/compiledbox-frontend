@@ -104,7 +104,7 @@ const Page = () => {
       <section className="relative pb-24 lg:pb-32">
         <MaxWidthWrapper className=" max-w-screen-3xl ">
           <div className=" lg:max-w-none bg-bgdark p-10 rounded-[2rem] lg:rounded-[4rem]">
-            <div className="pb-10 flex flex-col lg:flex-row gap-10 lg:gap-0 lg:justify-between items-center">
+            <div className="pb-10 flex flex-col xl:flex-row gap-10 xl:gap-0 lg:justify-between items-center">
               <div>
                 <Subheading className='tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent'>Our Process</Subheading>
               <p className='text-gray-100 max-w-3xl'>From understanding your needs to crafting and deploying your web solution, we ensure a seamless journey with expert execution at every step.</p>

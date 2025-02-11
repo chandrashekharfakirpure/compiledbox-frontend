@@ -25,8 +25,8 @@ const Page = () => {
                                 <FrameIcon color='#2563eb' strokeWidth={1} size={100} />
                             </div>
                         </div>
-                        <div className='bg-bgdark p-10 rounded-[1.8rem] lg:rounded-[2rem] flex flex-col justify-between'>
-                            <Subheading className='bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent'>A space dedicated to creativity</Subheading>
+                        <div className='bg-bgdark p-5 xl:p-10 rounded-[1.8rem] lg:rounded-[2rem] flex flex-col justify-between'>
+                            <Subheading className='bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent lg:text-[2.5rem] xl:text-[3.2rem]'>A space dedicated to creativity</Subheading>
                             <div className='flex justify-end'>
                                 <MaximizeIcon color='#2563eb' strokeWidth={1} size={100} />
                             </div>

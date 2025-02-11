@@ -44,11 +44,11 @@ export default function Home() {
                     <ChevronRightIcon className="ml-1 size-5 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
                   </AnimatedGradientText>
                 </div>
-                <h1 className="text-[2.5rem] lg:text-[4.5rem] leading-snug font-medium tracking-tighter bg-gradient-to-r from-gray-800 to-gray-950 bg-clip-text text-transparent">
+                <h1 className="text-[2rem] lg:text-[3rem] xl:text-[3.5rem] 2xl:text-[4.5rem] leading-snug font-medium tracking-tighter bg-gradient-to-r from-gray-800 to-gray-950 bg-clip-text text-transparent">
                   Top-Notch Web Design Service to<span className="lg:block"> Stand out from the Crowd</span>
                 </h1>
 
-                <p className="text-gray-700 text-[1rem] lg:text-[1.2rem]">Our creative ideas combined with the power of NextJS gives your website special feel.<span className="lg:block">Your vision, our innovation.</span></p>
+                <p className="text-gray-700 text-[1rem] lg:text-[1.2rem]">Our creative ideas combined with the power of NextJS gives your website special feel.<span className="xl:block">Your vision, our innovation.</span></p>
               </div>
               <div className="flex justify-center ">
                 <div className="border border-blue-200 rounded-full py-4 px-5">
@@ -62,7 +62,7 @@ export default function Home() {
       </section>
       <section className="relative pb-24 sm:pb-32 md:pt-10">
         <MaxWidthWrapper className="max-w-screen-3xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-8">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-8 xl:gap-8">
             <div className="col-span-2 pb-24 bg-bgdark rounded-[2rem] flex flex-col space-y-10">
               <div className="space-y-5 p-8">
                 <Subheading className="text-gray-100">Responsive for every <div className="lg:block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></Subheading>
