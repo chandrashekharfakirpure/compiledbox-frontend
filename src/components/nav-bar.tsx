@@ -12,7 +12,7 @@ import { MaxWidthWrapper } from "./max-width-wrapper"
 export const Navbar = async () => {
     return (
         <nav className="sticky z-50 h-16 inset-0 top-0 w-full bg-gray-50 drop-shadow-sm">
-            <MaxWidthWrapper className="max-w-screen-3xl flex justify-between items-center">
+            <MaxWidthWrapper className="max-w-screen-3xl flex md:flex-col justify-between">
                 <div className="flex h-16 items-center justify-between">
                     <Link href='/' className="flex z-40">
                         <Image src='/images/logo.png' width={300} height={53} alt="CompiledBox Logo" />
@@ -80,8 +80,9 @@ export const Navbar = async () => {
                         </SheetContent>
                     </Sheet>
                 </div>
+                
             </MaxWidthWrapper>
-
+            
         </nav>
     )
 }

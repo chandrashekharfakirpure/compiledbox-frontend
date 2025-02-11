@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: "Proton Servers",
     images: [
       {
-        url: "https://compiledbox.com/assets/images/og/og-image-proton-servers.jpg",
+        url: "https://compiledbox.com/assets/images/custom-web-designing.png",
         width: 1200,
         height: 630,
         alt: "Your IT Infrastructure Partner Proton Servers",
       },
       {
-        url: "https://compiledbox.com/assets/images/og/og-image-proton-servers-alt.jpg",
+        url: "https://compiledbox.com/assets/images/custom-web-designing-alt.png",
         width: 600,
         height: 315,
         alt: "Your IT Infrastructure Partner Proton Servers Alt",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
       "We are web design agency specializing in responsive, modern website design. Our expert team crafts tailor-made solutions that deliver exceptional user experiences.",
     creator: "@protonservers",
     images: [
-      "https://compiledbox.com/assets/images/og/og-image-proton-servers.jpg",
+      "https://compiledbox.com/assets/images/custom-web-designing.png",
     ],
   },
 };
