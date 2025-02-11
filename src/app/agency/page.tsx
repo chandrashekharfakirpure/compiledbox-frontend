@@ -55,9 +55,9 @@ const Page = () => {
                                 <Accordion type="single" collapsible >
                                     {AGENCYFAQS.map((item, index) => (
                                         <AccordionItem key={index} value={`${index}`}>
-                                            <AccordionTrigger className="font-normal text-[0.9] lg:text-[1.2rem] text-gray-700">{item.question}</AccordionTrigger>
+                                            <AccordionTrigger className="font-normal text-[0.9rem] lg:text-[1.2rem] text-gray-800">{item.question}</AccordionTrigger>
                                             <AccordionContent>
-                                                <p className="text-gray-700 leading-relaxed">{item.answer}</p>
+                                                <p className="text-gray-700 leading-relaxed text-[1rem]">{item.answer}</p>
                                             </AccordionContent>
                                         </AccordionItem>
                                     ))}
