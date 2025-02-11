@@ -30,17 +30,17 @@ const ContactForm = () => {
                 action={formAction}
             >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <div >
+                    <div>
                         <Label className="text-gray-800">NAME</Label>
                         <Input name="name" required className="py-6 bg-gray-100 mt-2" />
                         <ZodErrors error={formState?.zodErrors?.name} />
                     </div>
-                    <div >
+                    <div>
                         <Label className="text-gray-800">EMAIL</Label>
                         <Input name="email" required className="py-6 bg-gray-100 mt-2" />
                         <ZodErrors error={formState?.zodErrors?.email} />
                     </div>
-                    <div className="col-span-2">
+                    <div className="lg:col-span-2">
                         <Label className="text-gray-800">MESSAGE</Label>
                         <Textarea name="message" required className="py-6 bg-gray-100 mt-2" />
                         <ZodErrors error={formState?.zodErrors?.message} />
