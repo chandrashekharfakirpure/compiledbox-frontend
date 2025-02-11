@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "CompiledBox",
     images: [
       {
-        url: "https://compiledbox.com/images/about-agency-compiledbox.png",
+        url: "https://compiledbox.com/images/about-agency.png",
         width: 1200,
         height: 630,
         alt: "web designing partner CompiledBox",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Learn about our passionate team of digital innovators—a custom web design agency committed to crafting responsive, engaging websites.",
     creator: "@protonservers",
     images: [
-      "https://compiledbox.com/images/about-agency-compiledbox.png",
+      "https://compiledbox.com/images/about-agency.png",
     ],
   },
 }
