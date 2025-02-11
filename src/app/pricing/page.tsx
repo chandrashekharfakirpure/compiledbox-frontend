@@ -8,6 +8,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { PRICINGFAQS } from '@/components/custom/pricing-faqs'
+import { Heading } from '@/components/custom/heading'
+import { Subheading } from '@/components/custom/sub-heading'
 
 const Page = () => {
   return (
@@ -16,9 +18,8 @@ const Page = () => {
         <MaxWidthWrapper className="max-w-screen-3xl">
           <div className='flex flex-col gap-5 justify-center items-center pb-10 lg:pb-16'>
             <div className='py-3 px-5 lg:py-4 lg:px-8 text-white rounded-full bg-blue-600 max-lg:text-center'>Scale your business to the next level</div>
-            <h1 className=" text-center text-[2rem] lg:text-[4rem] leading-snug font-medium tracking-tighter bg-gradient-to-r from-gray-800 to-gray-950 bg-clip-text text-transparent">
-              Choose your growth <span className="lg:block"> through our plans</span>
-            </h1>
+            <Heading className='text-center'>Choose your growth <span className="lg:block"> through our plans</span></Heading>
+            
             <p className='text-center'>Choose from our variety of plans designed to support your growth. <span className='lg:block'>Find the right fit and achieve your business goals!</span></p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -105,7 +106,7 @@ const Page = () => {
           <div className=" lg:max-w-none bg-bgdark p-10 rounded-[2rem] lg:rounded-[4rem]">
             <div className="pb-10 flex flex-col lg:flex-row gap-10 lg:gap-0 lg:justify-between items-center">
               <div>
-              <h2 className="text-[3.2rem] font-medium tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Our Process</h2>
+                <Subheading className='tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent'>Our Process</Subheading>
               <p className='text-gray-100 max-w-3xl'>From understanding your needs to crafting and deploying your web solution, we ensure a seamless journey with expert execution at every step.</p>
               </div>
               <div>
@@ -137,7 +138,7 @@ const Page = () => {
           <MaxWidthWrapper className="max-w-screen-3xl">
             <div className="p-5 lg:p-10 bg-white rounded-[2.5rem]">
               <div className="pb-2">
-                <h2 className="text-[3.2rem] font-semibold tracking-tighter text-bgdark">Frequently asked <span className="lg:block">Questions</span></h2>
+                <Subheading className='text-bgdark'>Frequently asked <span className="lg:block">Questions</span></Subheading>
               </div>
               <div className="w-full pb-5">
                 <Accordion type="single" collapsible >

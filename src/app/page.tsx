@@ -21,6 +21,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { FRONTFAQ } from "@/components/custom/faqs";
+import { Subheading } from "@/components/custom/sub-heading";
 
 export default function Home() {
   return (
@@ -64,7 +65,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-8">
             <div className="col-span-2 pb-24 bg-bgdark rounded-[2rem] flex flex-col space-y-10">
               <div className="space-y-5 p-8">
-                <h2 className="text-[2.2rem] lg:text-[2.9rem] text-gray-100 font-medium">Responsive for every <div className="lg:block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></h2>
+                <Subheading className="text-gray-100">Responsive for every <div className="lg:block"><span className="text-blue-500">device</span> and <span className="text-blue-500">browser</span>!</div></Subheading>
                 <p className="text-gray-300">We make sure that your website is available for every device user!</p>
               </div>
             </div>
@@ -114,7 +115,7 @@ export default function Home() {
         <MaxWidthWrapper className=" max-w-screen-3xl ">
           <div className=" lg:max-w-none bg-bgdark p-10 rounded-[2rem] lg:rounded-[4rem]">
             <div className="pb-10 ">
-              <h2 className="text-[3.2rem] font-semibold tracking-tighter bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Featured Work</h2>
+              <Subheading className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Featured Work</Subheading>
             </div>
             <Carousel
               opts={{
@@ -252,7 +253,7 @@ export default function Home() {
           <MaxWidthWrapper className="max-w-screen-3xl">
             <div className="p-5 lg:p-10 bg-white rounded-[2.5rem]">
               <div className="pb-2">
-                <h2 className="text-[3.2rem] font-semibold tracking-tighter text-bgdark">Frequently asked <span className="lg:block">Questions</span></h2>
+                <Subheading className='text-bgdark'>Frequently asked <span className="lg:block">Questions</span></Subheading>
               </div>
               <div className="w-full pb-5">
                 <Accordion type="single" collapsible >
