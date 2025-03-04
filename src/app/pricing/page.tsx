@@ -67,7 +67,7 @@ const Page = () => {
                   <ul className="space-y-3">
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Everything from Pixel Flair</li>
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Enterprise-grade frameworks</li>
-                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Robust back-end solutions </li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Open source back-end solutions </li>
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Priority Support</li>
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Faster Turnaround Times</li>
                   </ul>

@@ -14,7 +14,7 @@ const Footer = () => {
                             <p className='text-center text-gray-200 text-xl'>Your next departure starts here </p>
                         </div>
                         <div className="flex justify-center items-center">
-                            <Link href='#getstarted' className='flex  items-center justify-center rounded-full py-4 px-10 bg-blue-600 hover:bg-blue-600/90 text-white group'>Book a Call <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" /></Link>
+                            <Link href='/contact' className='flex  items-center justify-center rounded-full py-4 px-10 bg-blue-600 hover:bg-blue-600/90 text-white group'>Book a Call <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" /></Link>
                         </div>
                     </div>
 

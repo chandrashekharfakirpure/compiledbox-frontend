@@ -1,8 +1,16 @@
 import { AnimatedGradientText } from "@/components/animated-gradient-text";
+import { FRONTFAQ } from "@/components/custom/faqs";
+import { Subheading } from "@/components/custom/sub-heading";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -14,21 +22,13 @@ import { cn } from "@/lib/utils";
 import { CheckCircle2Icon, ChevronRightIcon, FrameIcon, Layers2Icon, PencilRulerIcon, SendHorizonalIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
-import { FRONTFAQ } from "@/components/custom/faqs";
-import { Subheading } from "@/components/custom/sub-heading";
 
 export default function Home() {
   return (
     <>
       <section className="relative flex h-auto w-full flex-col items-center justify-center overflow-hidden py-20 sm:py-24">
         <MaxWidthWrapper className="max-w-screen-3xl">
-          <div className="bg-white/80 py-24 text-center rounded-[4rem] backdrop-blur-2xl">
+          <div className="bg-white/80 py-24 text-center rounded-[2.5rem] md:rounded-[4rem] backdrop-blur-2xl">
             <div className="space-y-12">
               <div className="space-y-2">
                 <div className="z-10 flex items-center justify-center">
@@ -104,7 +104,7 @@ export default function Home() {
                     />+
                   </h3>
                   <p className="text-[1.1rem] text-gray-700">Successfully launched projects</p>
-                  <Button variant={'custom2'} size={'custom'} className="group">Contact Us<SendHorizonalIcon className="transition-transform group-hover:translate-x-2 duration-500" /></Button>
+                  <Link href='/contact' className={ buttonVariants({variant:'custom2', size:'custom', className:'group'})}>Contact Us<SendHorizonalIcon className="transition-transform group-hover:translate-x-2 duration-500" /></Link>
                 </div>
               </div>
             </div>
@@ -126,37 +126,37 @@ export default function Home() {
               <CarouselContent>
                 <CarouselItem className="lg:basis-1/3">
                   <div>
-                    <Image src='/images/5.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <Image src='/images/5.png' width={527} height={570} alt="Portfolio 1" className="rounded-[1.8rem] lg:rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">Proton Servers</h4>
                   </div>
                 </CarouselItem>
                 <CarouselItem className="lg:basis-1/3">
                   <div>
-                    <Image src='/images/2.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <Image src='/images/2.png' width={527} height={570} alt="Portfolio 1" className="rounded-[1.8rem] lg:rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">PaasTech</h4>
                   </div>
                 </CarouselItem>
                 <CarouselItem className="lg:basis-1/3">
                   <div>
-                    <Image src='/images/4.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <Image src='/images/4.png' width={527} height={570} alt="Portfolio 1" className="rounded-[1.8rem] lg:rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">HostnExtra Technologies</h4>
                   </div>
                 </CarouselItem>
                 <CarouselItem className="lg:basis-1/3">
                   <div>
-                    <Image src='/images/1.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <Image src='/images/1.png' width={527} height={570} alt="Portfolio 1" className="rounded-[1.8rem] lg:rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">HashTag</h4>
                   </div>
                 </CarouselItem>
                 <CarouselItem className="lg:basis-1/3">
                   <div>
-                    <Image src='/images/3.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <Image src='/images/3.png' width={527} height={570} alt="Portfolio 1" className="rounded-[1.8rem] lg:rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">MK Construction Solution</h4>
                   </div>
                 </CarouselItem>
                 <CarouselItem className="lg:basis-1/3">
                   <div>
-                    <Image src='/images/6.png' width={527} height={570} alt="Portfolio 1" className="rounded-[3rem]" />
+                    <Image src='/images/6.png' width={527} height={570} alt="Portfolio 1" className="rounded-[1.8rem] lg:rounded-[3rem]" />
                     <h4 className="text-xl text-white px-1 pt-5">Barbrika Technology</h4>
                   </div>
                 </CarouselItem>
@@ -165,7 +165,7 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
-      <section className="relative">
+      <section className="relative" id="getstarted">
         <div className="relative py-20 lg:py-24 flex w-full flex-col items-center justify-center overflow-hidden">
           <MaxWidthWrapper className="max-w-screen-3xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -213,7 +213,7 @@ export default function Home() {
                   <ul className="space-y-3">
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Everything from Pixel Flair</li>
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Enterprise-grade frameworks</li>
-                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Robust back-end solutions </li>
+                    <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Open source back-end solutions </li>
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Priority Support</li>
                     <li className="flex gap-2 items-center text-bgdark"><CheckCircle2Icon fill="#3b82f6" color="#fff" size={30} /> Faster Turnaround Times</li>
                   </ul>
@@ -272,7 +272,7 @@ export default function Home() {
                   <h4 className="text-center max-w-lg text-gray-800">Got questions? Here are answers to the ones we get asked most often.</h4>
                 </div>
                 <div className="flex justify-center items-center">
-                  <Link href='#getstarted' className='flex  items-center justify-center rounded-full py-4 px-10 bg-blue-600 hover:bg-blue-600/90 text-white group'>Ask a Question <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" /></Link>
+                  <Link href='/contact' className='flex  items-center justify-center rounded-full py-4 px-10 bg-blue-600 hover:bg-blue-600/90 text-white group'>Ask a Question <ChevronRightIcon className="ml-1 size-5 transition-transform duration-500 group-hover:translate-x-2" /></Link>
                 </div>
               </div>
             </div>

@@ -46,7 +46,7 @@ const ContactForm = () => {
                         <ZodErrors error={formState?.zodErrors?.message} />
                     </div>
                 </div>
-                <div className="flex gap-16 mt-10">
+                <div className="flex flex-col md:flex-row gap-10 md:gap-16 mt-10">
                     <div>
                         <Label className="text-gray-800">SERVICE</Label>
                         <Select name="service">
@@ -70,17 +70,16 @@ const ContactForm = () => {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
-                                    <SelectItem value="₹50000">₹50000</SelectItem>
-                                    <SelectItem value="₹100000">₹100000</SelectItem>
+                                    <SelectItem value="₹50000">₹50000-₹100000</SelectItem>
                                     <SelectItem value="₹110000-₹250000">₹110000-₹250000</SelectItem>
-                                    <SelectItem value="₹260000">₹260000{">"}</SelectItem>
+                                    <SelectItem value="₹260000">₹260000{"+"}</SelectItem>
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
                     </div>
                     
                 </div>
-                <div >
+                <div>
                         <div className="flex items-center gap-2 mt-10">
                             <Switch name="accept" />
                             <Label className="text-gray-800">Accept Privacy Policy</Label>
