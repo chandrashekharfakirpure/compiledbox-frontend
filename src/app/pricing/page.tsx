@@ -126,7 +126,7 @@ const Page = () => {
               </div>
               <div className='p-10 bg-white rounded-3xl space-y-5'>
                   <RocketIcon strokeWidth={1.5} color='#2563eb' size={45}/>
-                  <h2 className='text-[1.8rem] lg:text-[2rem] text-bgdark'>Discover</h2>
+                  <h2 className='text-[1.8rem] lg:text-[2rem] text-bgdark'>Deploy</h2>
                   <p className='text-gray-800'>we finalize and deploy your project, ensuring a smooth transition to launch. We provide ongoing support and revisions.</p>
               </div>
             </div>
