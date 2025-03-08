@@ -25,6 +25,9 @@ export const Navbar = async () => {
                         <Link href='/agency' className='flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
                             Agency
                         </Link>
+                        <Link href='/open-source' className='flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
+                            Open Source
+                        </Link>
                         <Link href='/blog' className='flex text-sm items-center gap-1 text-gray-800 hover:bg-gray-100 py-1 px-4 rounded-md'>
                             Blog
                         </Link>
