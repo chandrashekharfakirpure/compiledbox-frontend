@@ -35,7 +35,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <Link href='/' className="flex z-40">
-                                <Image src='/images/logo2-white.png' width={300} height={53} alt="CompiledBox Logo" />
+                                <Image src='/images/logo-white.png' width={300} height={53} alt="CompiledBox Logo" />
                                 <span className="sr-only">CompiledBox</span>
                             </Link>
                         </div>

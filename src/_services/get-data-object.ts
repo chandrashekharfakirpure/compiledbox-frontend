@@ -1,4 +1,4 @@
-export async function GetObjectListData(path: string | string[], page: string | string[]) {
+export async function getObjectListData(path: string | string[], page: string | string[]) {
     const res = await fetch(`${process.env.API_URL}/api/${path}/?page=${page}`, {
         headers: {
             Authorization: `Bearer ${process.env.API_KEY}`,
@@ -8,16 +8,14 @@ export async function GetObjectListData(path: string | string[], page: string | 
     })
     if (!res.ok) {
         return {
-            props: {
-                data: [],
-            },
+            data: false,
         };
     }
     const data = await res.json()
     return data
 }
 
-export async function GetObjectData(path: string ,slug: string ) {
+export async function getObjectData(path: string ,slug: string ) {
     const res = await fetch(`${process.env.API_URL}/api/${path}/${slug}`, {
         headers: {
             Authorization: `Bearer ${process.env.API_KEY}`,
@@ -27,16 +25,14 @@ export async function GetObjectData(path: string ,slug: string ) {
     })
     if (!res.ok) {
         return {
-            props: {
-                data: [],
-            },
+            data: false,
         };
     }
     const data = await res.json()
     return data
 }
 
-export async function GetSearchDataObject(path: string, search: string | string[], page: string | string[]) {
+export async function getSearchDataObject(path: string, search: string | string[], page: string | string[]) {
     const res = await fetch(`${process.env.API_URL}/api/${path}?page=${page}&search=${search}`, {
         headers: {
             Authorization: `Bearer ${process.env.API_KEY}`,
@@ -46,9 +42,7 @@ export async function GetSearchDataObject(path: string, search: string | string[
     })
     if (!res.ok) {
         return {
-            props: {
-                data: [],
-            },
+            data: false,
         };
     }
     const data = await res.json()
