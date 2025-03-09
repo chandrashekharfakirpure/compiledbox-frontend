@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost'
+      },
+      {
+        protocol: 'https',
+        hostname: 'cbblog-api-us03.hnxlab.com'
       }
     ]
   },
