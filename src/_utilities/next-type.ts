@@ -21,3 +21,8 @@ export interface PaginationWrapperProps {
     has_previous: boolean
     first_page: string
 }
+
+export interface SitemapProps {
+    slug: string
+    updated_at: string
+}

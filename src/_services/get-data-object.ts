@@ -48,3 +48,22 @@ export async function getSearchDataObject(path: string, search: string | string[
     const data = await res.json()
     return data
 }
+
+export async function getSitemapData(path: string) {
+    const res = await fetch(`${process.env.API_URL}/api/${path}/sm`, {
+        headers: {
+            Authorization: `Bearer ${process.env.API_KEY}`,
+            'Content-type': 'application/json',
+        },
+        next: { revalidate: 3600 }
+    })
+    if (!res.ok) {
+        return {
+            props: {
+                data: [],
+            },
+        };
+    }
+    const data = await res.json()
+    return data
+}

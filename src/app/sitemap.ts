@@ -1,6 +1,19 @@
+import { getSitemapData } from "@/_services/get-data-object"
+import { SitemapProps } from "@/_utilities/next-type"
 
 export default async function sitemap() {
     const baseUrl = 'https://compiledbox.com'
+
+    const blogs = await getSitemapData('articles')
+    const blogsUrls =
+        blogs?.map((item: SitemapProps) => {
+            return {
+                url: `${baseUrl}/blog/${item.slug}`,
+                lastModified: `${item.updated_at}`,
+                changeFrequency: 'monthly',
+                priority: 0.8,
+            }
+        }) ?? []
 
     return [
         {
@@ -38,6 +51,7 @@ export default async function sitemap() {
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.80,
-        }
+        },
+        ...blogsUrls,
     ]
 }
