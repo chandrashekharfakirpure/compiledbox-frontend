@@ -12,7 +12,6 @@ const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     first_page
 }) => {
     const router = useRouter()
-    console.log(has_next)
     return (
         <>
             <section className="flex mx-auto justify-end  ">

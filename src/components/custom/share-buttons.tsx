@@ -6,9 +6,9 @@ import React from 'react'
 const ShareButtons = ({ slug }: { slug: string }) => {
     return (
         <>
-            <div className="h-fit lg:sticky lg:inset-24">
+            <div className="h-fit lg:sticky lg:inset-24 w-fit ">
                 <p className="pb-4">Share:</p>
-                <div className="grid grid-cols-1 lg:grid-cols-4">
+                <div className="grid grid-cols-4 gap-5">
                     <button onClick={() => { navigator.clipboard.writeText(`https://compiledbox.com/blog/${slug}`) }} className=" w-12 h-12 flex justify-center items-center p-2 bg-bgdark rounded-full text-white hover:text-bgdark hover:bg-transparent border-bgdark border">
                         <LinkIcon />
                     </button>

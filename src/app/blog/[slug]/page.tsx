@@ -40,7 +40,7 @@ const Page = async ({
                 <MaxWidthWrapper className="max-w-screen-3xl">
                     <div className='grid grid-cols-1 lg:grid-cols-5 gap-16'>
                         <ShareButtons slug={data.slug}/>
-                        <div className="px-5 lg:px-10 py-8 lg:py-12 space-y-5 bg-white rounded-[1.5rem] md:rounded-[1.5rem] col-span-3">
+                        <div className="px-5 lg:px-10 py-8 lg:py-12 space-y-5 bg-white rounded-[1.5rem] md:rounded-[1.5rem] lg:col-span-3">
                             <div className="text-gray-700 space-y-5 font-light tracking-wide" id="content">
                                 {desc}
                             </div>
